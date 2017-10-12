@@ -22,5 +22,3 @@ C. Medicines sold a lot
 D. Expenses
 E. Debt to companies  
 F. ETC
-
-https://github.com/abdalrahmanatwah/ATWAH
