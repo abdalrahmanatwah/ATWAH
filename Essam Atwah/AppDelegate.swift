@@ -19,9 +19,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         FIRApp.configure()
         
-        do {
-            try? FIRAuth.auth()?.signOut()
-        }
+//        do {
+//            try? FIRAuth.auth()?.signOut()
+//        }
 
         if let user = FIRAuth.auth()?.currentUser{
             print(user)

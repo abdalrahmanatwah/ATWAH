@@ -10,14 +10,12 @@ import UIKit
 import Foundation
 
 
-
-
-
 class C2: UITableViewCell {
     
     
     var testBoxOrStrip = 0
     var AmountUpdated = 0.0
+    
     @IBOutlet weak var nameC2: UILabel!
     @IBOutlet weak var priceC2: UILabel!
     @IBOutlet weak var itemC2: UILabel!
@@ -30,6 +28,7 @@ class C2: UITableViewCell {
         super.awakeFromNib()
         SHorALC2.layer.cornerRadius = 10
         sellOutlet.layer.cornerRadius = 10
+        nameC2.layer.cornerRadius = 10
     }
     
     @IBAction func ShorALC2action(_ sender: UISegmentedControl)

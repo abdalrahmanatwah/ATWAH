@@ -12,16 +12,10 @@ import Firebase
 
 class Let_Started: UIViewController {
 
-    @IBOutlet weak var hello: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-            guard let email = FIRAuth.auth()?.currentUser?.email , !email.isEmpty else {
-                print("Email is empty")
-                return
-            }
-            
-        hello.text! = "Hello   \(email)"
+
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

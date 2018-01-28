@@ -9,7 +9,7 @@
 import UIKit
 
 
-class A2: UITableViewController , UISearchResultsUpdating {
+class A2: UITableViewController /*, UISearchResultsUpdating*/ {
     
    
     var search : UISearchController!
@@ -22,34 +22,35 @@ class A2: UITableViewController , UISearchResultsUpdating {
         super.viewDidLoad()
         re.tableView.delegate = self
         re.tableView.dataSource = self
-        search = UISearchController(searchResultsController: self.re)
-        tableView.tableHeaderView = search.searchBar
-        search.dimsBackgroundDuringPresentation = false
-        definesPresentationContext = true
-        search.searchResultsUpdater = self
-        
-        ref = UIRefreshControl()
-        ref.addTarget(self, action: #selector(A2.addNumber), for: UIControlEvents.valueChanged)
-        tableView.addSubview(ref)
+//        search = UISearchController(searchResultsController: self.re)
+//        tableView.tableHeaderView = search.searchBar
+//        search.dimsBackgroundDuringPresentation = false
+//        definesPresentationContext = true
+//        search.searchResultsUpdater = self
+//        
+//        ref = UIRefreshControl()
+//        ref.addTarget(self, action: #selector(A2.addNumber), for: UIControlEvents.valueChanged)
+//        tableView.addSubview(ref)
 
     }
     
-    func addNumber(){
-        
-        tableView.reloadData()
-        ref.endRefreshing()
-    }
-    func updateSearchResults(for searchController: UISearchController) {
-        self.NameSearchBar = name.filter({ (dog:String) -> Bool in
-            if dog.lowercased().contains(self.search.searchBar.text!.lowercased()){
-                return true
-            }else{
-                 return false
-            }
-       })
-        self.re.tableView.reloadData()
-        
-    }
+//    func addNumber(){
+//        
+//        tableView.reloadData()
+//        ref.endRefreshing()
+//    }
+//    
+//    func updateSearchResults(for searchController: UISearchController) {
+//        self.NameSearchBar = name.filter({ (dog:String) -> Bool in
+//            if dog.lowercased().contains(self.search.searchBar.text!.lowercased()){
+//                return true
+//            }else{
+//                 return false
+//            }
+//       })
+//        self.re.tableView.reloadData()
+//        
+//    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
